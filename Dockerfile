@@ -8,3 +8,5 @@ FROM tomcat:9.0-slim
 COPY flag /flag
 EXPOSE 8080
 COPY --from=build /app/target/helloworld.war $CATALINA_HOME/webapps
+
+RUN echo "credit card number: 1234-1234-1234-1234" >> /var/tmp/importantdata.txt
